@@ -97,8 +97,8 @@ SRC = ft_atoi.c\
 	  ft_init_3v.c\
 	  ft_init_3v_p.c\
 	  ft_zero_3v.c\
-	  ft_zero_3v_p.c
-	 # get_next_line.c
+	  ft_zero_3v_p.c\
+	  get_next_line.c
 POINTO = $(SRC:%.c=%.o)
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
