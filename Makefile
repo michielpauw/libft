@@ -6,7 +6,7 @@
 #    By: mpauw <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:06:44 by mpauw             #+#    #+#              #
-#    Updated: 2018/01/29 17:21:52 by mpauw            ###   ########.fr        #
+#    Updated: 2018/02/02 11:29:52 by mpauw            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,7 @@ SRC = ft_atoi.c\
 	  ft_strrchr.c\
 	  ft_strsplit.c\
 	  ft_strstr.c\
+	  ft_realloc.c\
 	  ft_strsub.c\
 	  ft_strtrim.c\
 	  ft_tolower.c\
@@ -85,19 +86,17 @@ SRC = ft_atoi.c\
 	  get_next_line.c\
 	  ft_atod.c\
 	  ft_free_array.c\
-	  ft_3_dot_product.c\
+	  ft_3v_dot_product.c\
 	  ft_get_3v_size.c\
 	  ft_3v_add.c\
 	  ft_3v_subtract.c\
-	  ft_get_3_unit.c\
-	  ft_make_3_unit.c\
+	  ft_get_3v_unit.c\
+	  ft_make_3v_unit.c\
 	  ft_cross_product.c\
 	  ft_3v_scalar.c\
-	  ft_rotate_v.c\
+	  ft_rotate_3v.c\
 	  ft_init_3v.c\
-	  ft_init_3v_p.c\
-	  ft_zero_3v.c\
-	  ft_zero_3v_p.c
+	  ft_zero_3v.c
 POINTO = $(SRC:%.c=%.o)
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
