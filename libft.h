@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 18:04:39 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/07 12:05:52 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/07 17:13:04 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 void				ft_putchar(unsigned int c);
 void				ft_putstr(char const *s);
-char				*ft_itoa(int n);
+char				*ft_itoa(long long int n);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putnbr(int i);

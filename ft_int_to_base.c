@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/06 11:56:12 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/07 12:05:56 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/07 14:24:43 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ char	*ft_int_to_base(unsigned long long nbr, const char *base_to)
 
 	len_to = ft_strlen(base_to);
 	len_new = 1;
+	i = 0;
 	while ((unsigned long long)ft_power(len_to, len_new) < nbr)
 		len_new++;
 	if (!(conv = (char *)malloc(sizeof(char) * (len_new + 1 + i))))

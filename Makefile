@@ -6,7 +6,7 @@
 #    By: mpauw <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:06:44 by mpauw             #+#    #+#              #
-#    Updated: 2018/02/02 11:29:52 by mpauw            ###   ########.fr        #
+#    Updated: 2018/03/07 14:24:23 by mpauw            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,9 @@ SRC = ft_atoi.c\
 	  ft_putnbr_fd.c\
 	  ft_putstr.c\
 	  ft_putstr_fd.c\
+	  ft_int_to_base.c\
 	  ft_strcat.c\
+	  ft_strset.c\
 	  ft_strchr.c\
 	  ft_strclr.c\
 	  ft_strcmp.c\
