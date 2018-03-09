@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 18:04:39 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/07 17:13:04 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/09 17:09:37 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ void				*ft_memcpy(void *dst, const void *src, size_t n);
 size_t				ft_strlen(const char *s);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
-void				ft_putchar(unsigned int c);
+void				ft_putchar(wchar_t c);
 void				ft_putstr(char const *s);
-char				*ft_itoa(long long int n);
+char				*ft_itoa(intmax_t n);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putnbr(int i);
@@ -123,8 +123,7 @@ t_3v				ft_zero_3v(void);
 t_3v				ft_init_3v(double a, double b, double c);
 char				*ft_brace_content(char *input, char o, char c);
 void				ft_realloc(void **s, size_t old_size, size_t new_size);
-char				*ft_int_to_base(unsigned long long nbr,
-			const char *base_to);
+char				*ft_int_to_base(uintmax_t nbr, const char *base_to);
 char				*ft_strset(char c, size_t length);
 
 #endif
