@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 18:04:39 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/09 17:09:37 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/13 18:08:54 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <math.h>
+# include <limits.h>
 
 typedef struct		s_list
 {
@@ -37,7 +38,7 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 void				ft_putchar(wchar_t c);
 void				ft_putstr(char const *s);
-char				*ft_itoa(intmax_t n);
+char				*ft_itoa(long long int n);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putnbr(int i);
@@ -91,14 +92,14 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-size_t				ft_numlen(int n);
+size_t				ft_numlen(long long int n);
 void				ft_lstaddright(t_list **alst, t_list *new);
 int					ft_lstaddnewr(t_list **alst, void const *content,
 		size_t content_size);
 int					ft_lstaddnewl(t_list **alst, void const *content,
 		size_t content_size);
 size_t				ft_sqrt(size_t nb);
-size_t				ft_power(int nb, size_t power);
+unsigned long int	ft_power(unsigned long int nb, size_t power);
 size_t				ft_factorial(size_t nb);
 size_t				ft_next_prime(int nb);
 int					*ft_factorization(int nb);
@@ -123,7 +124,7 @@ t_3v				ft_zero_3v(void);
 t_3v				ft_init_3v(double a, double b, double c);
 char				*ft_brace_content(char *input, char o, char c);
 void				ft_realloc(void **s, size_t old_size, size_t new_size);
-char				*ft_int_to_base(uintmax_t nbr, const char *base_to);
+char				*ft_int_to_base(unsigned long int nbr, const char *base_to);
 char				*ft_strset(char c, size_t length);
 
 #endif

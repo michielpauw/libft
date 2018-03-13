@@ -6,13 +6,13 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 08:28:30 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/09 11:39:45 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/13 18:10:26 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	recur(int nb, char **c, int i)
+static int	recur(long long int nb, char **c, int i)
 {
 	if (nb < 10)
 	{
@@ -28,7 +28,9 @@ static int	recur(int nb, char **c, int i)
 	return (0);
 }
 
-char		*ft_itoa(intmax_t n)
+
+#include <stdio.h>
+char		*ft_itoa(long long int n)
 {
 	int		neg;
 	int		length;
@@ -41,10 +43,10 @@ char		*ft_itoa(intmax_t n)
 	if (n < 0)
 	{
 		*to_return = '-';
-		if (n == -2147483648)
-		{
+		if (n == INT_MIN)
 			return (to_return = ft_strdup("-2147483648"));
-		}
+		else if (n == LONG_MIN)
+			return (to_return = ft_strdup("-9223372036854775808"));
 		n = -n;
 	}
 	recur(n, &to_return, length + neg - 1);

@@ -6,13 +6,13 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:32:17 by mpauw             #+#    #+#             */
-/*   Updated: 2017/11/10 11:36:06 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/13 17:54:37 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_numlen(int n)
+size_t	ft_numlen(long long int n)
 {
 	int	length;
 

@@ -6,13 +6,13 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 13:47:07 by mpauw             #+#    #+#             */
-/*   Updated: 2017/11/10 14:34:26 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/13 17:32:59 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_power(int nb, size_t power)
+unsigned long int	ft_power(unsigned long int nb, size_t power)
 {
 	if (power == 0)
 	{
