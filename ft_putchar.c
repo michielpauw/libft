@@ -6,13 +6,13 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 13:10:31 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/09 13:05:44 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/13 20:15:13 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			get_amount_bytes(wchar_t c)
+static size_t			get_amount_bytes(wchar_t c)
 {
 	size_t	length;
 
@@ -24,7 +24,7 @@ size_t			get_amount_bytes(wchar_t c)
 	return ((length + 3) / 5);
 }
 
-unsigned char	get_char(wchar_t *c, size_t index, size_t length)
+static unsigned char	get_char(wchar_t *c, size_t index, size_t length)
 {
 	unsigned char	to_return;
 	unsigned int	pow;
@@ -49,7 +49,7 @@ unsigned char	get_char(wchar_t *c, size_t index, size_t length)
 	return (to_return);
 }
 
-void			ft_putchar(wchar_t c)
+void					ft_putchar(wchar_t c)
 {
 	size_t			i;
 	size_t			length;

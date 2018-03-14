@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 08:28:30 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/13 18:10:26 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/14 14:50:33 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ static int	recur(long long int nb, char **c, int i)
 }
 
 
-#include <stdio.h>
 char		*ft_itoa(long long int n)
 {
 	int		neg;
