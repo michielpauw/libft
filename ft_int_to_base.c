@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/06 11:56:12 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/14 14:54:28 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/16 17:41:23 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static size_t	get_len_new(int len_to, unsigned long
 	return (len_new);
 }
 
-char		*ft_int_to_base(unsigned long long int nbr, const char *base_to)
+char			*ft_int_to_base(unsigned long long int nbr, const char *base_to)
 {
 	char	*conv;
 	size_t	len_new;

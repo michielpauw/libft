@@ -6,7 +6,7 @@
 #    By: mpauw <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:06:44 by mpauw             #+#    #+#              #
-#    Updated: 2018/03/07 14:24:23 by mpauw            ###   ########.fr        #
+#    Updated: 2018/03/16 17:12:55 by mpauw            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ SRC = ft_atoi.c\
 	  ft_toupper.c\
 	  ft_lstnew.c\
 	  ft_lstdelone.c\
+	  ft_char_bytes.c\
 	  ft_lstdel.c\
 	  ft_lstadd.c\
 	  ft_lstiter.c\
