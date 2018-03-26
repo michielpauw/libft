@@ -6,13 +6,13 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 13:10:31 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/13 20:15:13 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/26 08:44:47 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t			get_amount_bytes(wchar_t c)
+static size_t			get_amount_bytes_char(wchar_t c)
 {
 	size_t	length;
 
@@ -61,7 +61,7 @@ void					ft_putchar(wchar_t c)
 		write(1, &c, 1);
 		return ;
 	}
-	length = get_amount_bytes(c);
+	length = get_amount_bytes_char(c);
 	while (i < length)
 	{
 		uc = get_char(&c, i++, length);

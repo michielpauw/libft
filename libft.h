@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 18:04:39 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/26 08:42:13 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/26 08:42:52 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,8 @@
 # include <unistd.h>
 # include <string.h>
 # include <math.h>
-<<<<<<< HEAD
 # include "ft_printf/libftprintf.h"
-=======
 # include <limits.h>
->>>>>>> 068aaf4de673016582a8e90961cd9e8a3db8b052
 
 typedef struct			s_list
 {
