@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/16 10:51:50 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/20 18:32:17 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/26 14:01:11 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static wchar_t	*set_w_string(int size, wchar_t c)
 	int		i;
 
 	if (!(big = (wchar_t *)malloc(sizeof(wchar_t) * (size + 1))))
-		error(2);
+		ft_error(2);
 	*(big + size) = 0;
 	i = 0;
 	while (i < size)

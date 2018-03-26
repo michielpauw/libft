@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 18:04:39 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/26 12:04:42 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/26 13:57:36 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,5 +133,6 @@ char					*ft_int_to_base(unsigned long long int nbr,
 char					*ft_strset(char c, size_t length);
 int						ft_char_bytes(wchar_t c);
 int						ft_printf(const char *format, ...);
+void					ft_error(int error);
 
 #endif

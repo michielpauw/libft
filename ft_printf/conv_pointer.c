@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/06 11:35:51 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/16 17:30:26 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/26 14:00:43 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static char	*get_init_str(t_event *ev)
 	if (in == NULL)
 		tmp_str = ft_strjoin("", "(null)");
 	if (!(tmp_str = ft_int_to_base((uintmax_t)in, "0123456789abcdef")))
-		error(2);
+		ft_error(2);
 	return (tmp_str);
 }
 

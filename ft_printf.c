@@ -6,18 +6,11 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 11:45:43 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/26 11:55:00 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/26 13:58:09 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf/libftprintf.h"
-
-void		error(int error)
-{
-	if (error == 2)
-		ft_putstr_fd("Error whilst allocating memory\n", 2);
-	exit(1);
-}
 
 static void	setup_event(t_event *ev, va_list ap)
 {

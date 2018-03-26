@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/16 17:33:22 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/26 10:23:50 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/26 13:58:47 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,6 @@ void						conv_percent(t_event *ev, t_conv *conv);
 void						conv_pointer(t_event *ev, t_conv *conv);
 char						*handle_min_width(t_conv *conv, char *little);
 char						*handle_precision(t_conv *conv, char *str);
-void						error(int error);
 void						set_len_mod_dec(t_event *ev);
 void						set_len_mod_hex_oct(t_event *ev);
 int							get_bytes_to_write(wchar_t *tmp_str, t_conv *conv);
