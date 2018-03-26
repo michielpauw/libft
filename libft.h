@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 18:04:39 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/26 08:42:52 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/26 12:04:42 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <unistd.h>
 # include <string.h>
 # include <math.h>
-# include "ft_printf/libftprintf.h"
 # include <limits.h>
 
 typedef struct			s_list
@@ -133,5 +132,6 @@ char					*ft_int_to_base(unsigned long long int nbr,
 			const char *base_to);
 char					*ft_strset(char c, size_t length);
 int						ft_char_bytes(wchar_t c);
+int						ft_printf(const char *format, ...);
 
 #endif

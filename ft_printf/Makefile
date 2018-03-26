@@ -6,14 +6,13 @@
 #    By: mpauw <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/06 17:41:17 by mpauw             #+#    #+#              #
-#    Updated: 2018/03/26 10:23:31 by mpauw            ###   ########.fr        #
+#    Updated: 2018/03/26 12:03:25 by mpauw            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 INCLUDES = libftprintf.h
-SRCS = ft_printf.c\
-	   conv_char.c\
+SRCS = conv_char.c\
 	   conv_dec.c\
 	   conv_hex_oct.c\
 	   conv_percent.c\
