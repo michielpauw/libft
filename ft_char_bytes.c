@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_char_bytes.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 09:08:49 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/09 11:29:46 by mpauw            ###   ########.fr       */
+/*   Created: 2018/03/16 17:11:38 by mpauw             #+#    #+#             */
+/*   Updated: 2018/03/16 17:12:17 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+int	ft_char_bytes(wchar_t c)
 {
-	if (s != NULL)
-	{
-		while (*s)
-			ft_putchar((wchar_t)(*(s++)));
-	}
+	size_t	length;
+
+	length = 1;
+	while (c /= 2)
+		length++;
+	if (length < 8)
+		return (1);
+	return ((length + 3) / 5);
 }

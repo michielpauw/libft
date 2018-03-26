@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:39:14 by mpauw             #+#    #+#             */
-/*   Updated: 2017/11/13 11:02:00 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/13 17:16:39 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static char	*get_new(int nbr, const char *base_to)
 	sign = nbr < 0 ? -1 : 1;
 	i = nbr < 0 ? 1 : 0;
 	len_new = 1;
-	while (ft_power(len_to, len_new) < (size_t)nbr * sign)
+	while (ft_power(len_to, len_new) <= (size_t)nbr * sign)
 		len_new++;
 	if (!(conv = (char *)malloc(sizeof(char) * (len_new + 1 + i))))
 		return (NULL);

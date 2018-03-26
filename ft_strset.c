@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 09:08:49 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/09 11:29:46 by mpauw            ###   ########.fr       */
+/*   Created: 2018/03/06 16:10:26 by mpauw             #+#    #+#             */
+/*   Updated: 2018/03/16 17:40:48 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+char	*ft_strset(char c, size_t length)
 {
-	if (s != NULL)
+	char	*str;
+
+	if (!(str = (char *)malloc(sizeof(char) * (length + 1))))
+		return (NULL);
+	*(str + length) = 0;
+	while (length)
 	{
-		while (*s)
-			ft_putchar((wchar_t)(*(s++)));
+		length--;
+		*(str + length) = c;
 	}
+	return (str);
 }
