@@ -6,7 +6,7 @@
 #    By: mpauw <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:06:44 by mpauw             #+#    #+#              #
-#    Updated: 2018/02/02 11:29:52 by mpauw            ###   ########.fr        #
+#    Updated: 2018/03/26 08:33:59 by mpauw            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -99,20 +99,26 @@ SRC = ft_atoi.c\
 	  ft_zero_3v.c
 POINTO = $(SRC:%.c=%.o)
 NAME = libft.a
+PRINTFDIR = ./ft_printf
+PRINTF = libftprintf.a
 FLAGS = -Wall -Wextra -Werror
 INCLUDE_HEADER = -I.
 
 all: $(NAME)
 
-$(NAME): $(POINTO)
+$(NAME): $(POINTO) $(PRINTFDIR)$(PRINTF)
 	-@ar rc $(NAME) $(POINTO) && ranlib $(NAME)
 	-@echo "Libft ready"
 
 %.o: %.c $(INCLUDES)
 	-@gcc -ggdb $(FLAGS) $(INCLUDE_HEADER) $(FLAGS) -c $(SRC)
 
+$(PRINTFDIR)$(PRINTF):
+	$(MAKE) -C $(PRINTFDIR) $({PRINTF)
+
 clean:
 	-@/bin/rm -f $(POINTO)
+	-@$(MAKE) -C $(PRINTFDIR) clean
 
 fclean: clean
 	-@/bin/rm -f $(NAME)
