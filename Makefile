@@ -6,7 +6,7 @@
 #    By: mpauw <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:06:44 by mpauw             #+#    #+#              #
-#    Updated: 2018/03/26 13:43:32 by mpauw            ###   ########.fr        #
+#    Updated: 2018/03/26 14:07:01 by mpauw            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -112,7 +112,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $(PRINTFDIR)$(PRINTF) 
 	-@ar rc $(NAME) $(OBJ) && ranlib $(NAME)
-#	-@libtool -static -o $(NAME) $(PRINTFDIR)$(PRINTF) $(OBJ)
+	-@libtool -static -o $(NAME) $(PRINTFDIR)$(PRINTF) $(OBJ)
 	-@echo "Libft ready"
 
 %.o: %.c $(INCLUDES)

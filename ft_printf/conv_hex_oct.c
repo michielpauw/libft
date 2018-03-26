@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/06 11:37:15 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/19 16:06:39 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/26 14:00:32 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,22 +63,22 @@ static char						*get_tmp_str(t_conv *conv)
 	if (conv->type == 'x' && !conv->upper)
 	{
 		if (!(tmp_str = ft_int_to_base(get_in(conv), "0123456789abcdef")))
-			error(2);
+			ft_error(2);
 	}
 	else if (conv->type == 'x' && conv->upper)
 	{
 		if (!(tmp_str = ft_int_to_base(get_in(conv), "0123456789ABCDEF")))
-			error(2);
+			ft_error(2);
 	}
 	else if (conv->type == 'u')
 	{
 		if (!(tmp_str = ft_int_to_base(get_in(conv), "0123456789")))
-			error(2);
+			ft_error(2);
 	}
 	else
 	{
 		if (!(tmp_str = ft_int_to_base(get_in(conv), "01234567")))
-			error(2);
+			ft_error(2);
 	}
 	return (tmp_str);
 }

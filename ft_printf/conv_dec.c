@@ -6,7 +6,7 @@
 /*   By: mpauw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/06 11:36:58 by mpauw             #+#    #+#             */
-/*   Updated: 2018/03/19 16:06:53 by mpauw            ###   ########.fr       */
+/*   Updated: 2018/03/26 14:00:24 by mpauw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static char	*conv_neg(char *s, t_conv *conv)
 	len = ft_strlen(s);
 	conv->type_sign = '-';
 	if (!(to_return = (char *)malloc(sizeof(char) * len)))
-		error(2);
+		ft_error(2);
 	while (len)
 	{
 		to_return[len - 1] = s[len];
@@ -93,7 +93,7 @@ void		conv_dec(t_event *ev, t_conv *conv)
 
 	get_len_mod(conv, ev, 'u');
 	if (!(tmp_str = get_initial_str(conv)))
-		error(2);
+		ft_error(2);
 	if (*tmp_str == '0' && conv->precision < 0)
 		*tmp_str = 0;
 	if (*tmp_str == '-')
