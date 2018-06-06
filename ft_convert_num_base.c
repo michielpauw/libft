@@ -12,45 +12,38 @@
 
 #include "libft.h"
 
-static int	get_dec(const char *nbr, const char *base_from)
+static int	get_dec(int nbr, int len_from)
 {
-	int len_from;
 	int len_nbr;
 	int	dec;
 	int	sign;
-	int	i;
+	int	digit;
 
-	len_from = ft_strlen(base_from);
-	len_nbr = ft_strlen(nbr);
-	sign = *nbr == '-' ? -1 : 1;
+	sign = nbr < 0 ? -1 : 1;
+	nbr = sign * nbr;
 	dec = 0;
+	len_nbr = ft_numlen(nbr);
 	while (len_nbr--)
 	{
-		i = 0;
-		if (*nbr != '-')
-		{
-			while (*(base_from + i) != *nbr)
-				i++;
-			dec = dec + i * ft_power(len_from, len_nbr);
-		}
+		digit = nbr % ft_power(len_from, len_nbr + 1);
+		dec = dec + digit * ft_power(len_from, len_nbr);
 		nbr++;
 	}
 	return (sign * dec);
 }
 
-static char	*get_new(int nbr, const char *base_to)
+static char	*get_new(int nbr, int len_to)
 {
 	char	*conv;
 	size_t	len_new;
-	size_t	len_to;
 	int		sign;
 	int		i;
 
-	len_to = ft_strlen(base_to);
 	sign = nbr < 0 ? -1 : 1;
 	i = nbr < 0 ? 1 : 0;
+	nbr = nbr * sign;
 	len_new = 1;
-	while (ft_power(len_to, len_new) <= (size_t)nbr * sign)
+	while (ft_power(len_to, len_new) <= (size_t)nbr)
 		len_new++;
 	if (!(conv = (char *)malloc(sizeof(char) * (len_new + 1 + i))))
 		return (NULL);
@@ -58,8 +51,8 @@ static char	*get_new(int nbr, const char *base_to)
 		*conv = '-';
 	while (len_new)
 	{
-		*(conv + i) = *(base_to + ((sign * nbr % ft_power(len_to, len_new)) /
-				ft_power(len_to, len_new - 1)));
+		*(conv + i) = ((nbr % ft_power(len_to, len_new)) /
+				ft_power(len_to, len_new - 1)) + '0';
 		i++;
 		len_new--;
 	}
@@ -67,13 +60,12 @@ static char	*get_new(int nbr, const char *base_to)
 	return (conv);
 }
 
-char		*ft_convert_base(const char *nbr, const char *base_from,
-		const char *base_to)
+char		*ft_convert_num_base(int nbr, size_t len_from, size_t len_to)
 {
 	int	dec;
 
-	if (ft_strlen(base_from) < 2 || ft_strlen(base_to) < 2)
+	if (len_from < 2 || len_to < 2)
 		ft_error(10);
-	dec = get_dec(nbr, base_from);
-	return (get_new(dec, base_to));
+	dec = get_dec(nbr, len_from);
+	return (get_new(dec, len_to));
 }

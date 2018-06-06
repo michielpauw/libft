@@ -12,8 +12,10 @@
 
 #include "libft.h"
 
-void	error(int error)
+void	ft_error(int error)
 {
+	if (error == 10)
+		ft_putstr_fd("Base length must be at least 2\n", 2);
 	if (error == 2)
 		ft_putstr_fd("Error whilst allocating memory\n", 2);
 	exit(1);

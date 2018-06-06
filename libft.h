@@ -110,6 +110,8 @@ int						*ft_factorization(int nb);
 int						ft_isprime(int n);
 char					*ft_convert_base(const char *nbr, const char *base_from,
 			const char *base_to);
+char					*ft_convert_num_base(int nbr, size_t len_from,
+			size_t len_to);
 size_t					ft_sqrt_fl(size_t nb);
 size_t					ft_sqrt_cl(size_t nb);
 int						get_next_line(const int fd, char **line);

@@ -84,6 +84,7 @@ SRC = ft_atoi.c\
 	  ft_factorization.c\
 	  ft_isprime.c\
 	  ft_convert_base.c\
+	  ft_convert_num_base.c\
 	  ft_sqrt_fl.c\
 	  ft_sqrt_cl.c\
 	  get_next_line.c\
@@ -100,6 +101,7 @@ SRC = ft_atoi.c\
 	  ft_rotate_3v.c\
 	  ft_init_3v.c\
 	  ft_zero_3v.c\
+	  ft_error.c\
 	  ft_printf.c
 OBJ = $(SRC:%.c=%.o)
 NAME = libft.a
