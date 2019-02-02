@@ -26,8 +26,7 @@ static t_buff	*get_buff(int fd)
 			return (buff);
 		tmp = tmp->next;
 	}
-	if (!(buff = (t_buff *)malloc(sizeof(t_buff))))
-		return (NULL);
+	buff = (t_buff *)ft_alloc(sizeof(t_buff));
 	buff->fd = fd;
 	if (!(list) && !(list = ft_lstnew(NULL, 0)))
 		return (NULL);

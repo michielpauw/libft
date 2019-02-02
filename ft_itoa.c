@@ -36,8 +36,7 @@ char		*ft_itoa(long long int n)
 
 	length = ft_numlen(n);
 	neg = n < 0 ? 1 : 0;
-	if (!(to_return = (char *)malloc(sizeof(char) * (length + neg + 1))))
-		return (NULL);
+	to_return = (char *)ft_alloc(sizeof(char) * (length + neg + 1));
 	if (n < 0)
 	{
 		*to_return = '-';

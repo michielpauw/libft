@@ -45,8 +45,7 @@ static char	*get_new(int nbr, int len_to)
 	len_new = 1;
 	while (ft_power(len_to, len_new) <= (size_t)nbr)
 		len_new++;
-	if (!(conv = (char *)malloc(sizeof(char) * (len_new + 1 + i))))
-		return (NULL);
+	conv = (char *)ft_alloc(sizeof(char) * (len_new + 1 + i));
 	if (sign < 0)
 		*conv = '-';
 	while (len_new)
@@ -65,7 +64,7 @@ char		*ft_convert_num_base(int nbr, size_t len_from, size_t len_to)
 	int	dec;
 
 	if (len_from < 2 || len_to < 2)
-		ft_error(10);
+		ft_error(BASE_ERR);
 	dec = get_dec(nbr, len_from);
 	return (get_new(dec, len_to));
 }

@@ -52,8 +52,7 @@ static char	*get_new(int nbr, const char *base_to)
 	len_new = 1;
 	while (ft_power(len_to, len_new) <= (size_t)nbr * sign)
 		len_new++;
-	if (!(conv = (char *)malloc(sizeof(char) * (len_new + 1 + i))))
-		return (NULL);
+	conv = (char *)ft_alloc(sizeof(char) * (len_new + 1 + i));
 	if (sign < 0)
 		*conv = '-';
 	while (len_new)
@@ -73,7 +72,7 @@ char		*ft_convert_base(const char *nbr, const char *base_from,
 	int	dec;
 
 	if (ft_strlen(base_from) < 2 || ft_strlen(base_to) < 2)
-		ft_error(10);
+		ft_error(BASE_ERR);
 	dec = get_dec(nbr, base_from);
 	return (get_new(dec, base_to));
 }

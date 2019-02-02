@@ -19,8 +19,7 @@ static char	*get_string(char *input, int begin, int end)
 
 	if (!end || begin < 0)
 		return (NULL);
-	if (!(content = (char *)malloc(sizeof(char) * (end - begin))))
-		return (NULL);
+	content = (char *)ft_alloc(sizeof(char) * (end - begin));
 	i = 0;
 	while (i < end - begin - 1)
 	{

@@ -19,6 +19,7 @@ SRC = ft_atoi.c\
 	  ft_isprint.c\
 	  ft_itoa.c\
 	  ft_memalloc.c\
+	  ft_alloc.c\
 	  ft_memccpy.c\
 	  ft_memchr.c\
 	  ft_memcmp.c\
@@ -71,6 +72,8 @@ SRC = ft_atoi.c\
 	  ft_lstdel.c\
 	  ft_lstadd.c\
 	  ft_lstiter.c\
+	  ft_arraymap.c\
+	  ft_arrayiter.c\
 	  ft_lstmap.c\
 	  ft_numlen.c\
 	  ft_brace_content.c\
@@ -102,6 +105,8 @@ SRC = ft_atoi.c\
 	  ft_init_3v.c\
 	  ft_zero_3v.c\
 	  ft_error.c\
+	  ft_str_list_to_int.c\
+	  ft_int_in.c\
 	  ft_printf.c
 OBJ = $(SRC:%.c=%.o)
 NAME = libft.a

@@ -46,8 +46,7 @@ int			*ft_factorization(int nb)
 	}
 	while (ft_power(2, max) < (size_t)(nb * sign))
 		max++;
-	if (!(fac = (int *)malloc(sizeof(int) * (max + 2))))
-		return (NULL);
+	fac = (int *)ft_alloc(sizeof(int) * (max + 2));
 	*fac = sign;
 	fac = recur(fac, nb * sign, 1);
 	return (fac);

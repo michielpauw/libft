@@ -14,9 +14,14 @@
 
 void	ft_error(int error)
 {
-	if (error == 10)
-		ft_putstr_fd("Base length must be at least 2\n", 2);
-	if (error == 2)
-		ft_putstr_fd("Error whilst allocating memory\n", 2);
+	if (error == MEM_ERR)
+		ft_putstr_fd("A memory error occurred.\n", 2);
+	if (error == BASE_ERR)
+		ft_putstr_fd("A base error occurred.\n", 2);
+	if (error == ARGUMENT_ERR)
+		ft_putstr_fd("Unexpected (amount of) arguments.\n", 2);
+	if (error == VALUE_ERR)
+		ft_putstr_fd("Unexpected value.\n", 2);
+	ft_putstr_fd("Program will now terminate.\n", 2);
 	exit(1);
 }

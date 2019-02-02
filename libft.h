@@ -19,6 +19,7 @@
 # include <string.h>
 # include <math.h>
 # include <limits.h>
+# include "errors.h"
 
 typedef struct			s_list
 {
@@ -136,5 +137,12 @@ char					*ft_strset(char c, size_t length);
 int						ft_char_bytes(wchar_t c);
 int						ft_printf(const char *format, ...);
 void					ft_error(int error);
+void					*ft_alloc(size_t bytes);
+void					ft_arrayiter(void **array, size_t iters, size_t size,
+		void (*f) ());
+void					**ft_arraymap(void **in_arr, size_t iters, size_t size,
+		void *(*f) ());
+int						*ft_str_list_to_int(char *str, size_t size);
+int						ft_int_in(int *list, int to_check, size_t size);
 
 #endif

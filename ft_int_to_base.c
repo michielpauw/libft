@@ -37,8 +37,7 @@ char			*ft_int_to_base(unsigned long long int nbr, const char *base_to)
 
 	len_to = ft_strlen(base_to);
 	len_new = get_len_new(len_to, nbr);
-	if (!(conv = (char *)malloc(sizeof(char) * (len_new + 1))))
-		return (NULL);
+	conv = (char *)ft_alloc(sizeof(char) * (len_new + 1));
 	*conv = *(base_to + (nbr / ft_power(len_to, len_new - 1)));
 	len_new--;
 	i = 1;
