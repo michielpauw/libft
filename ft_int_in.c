@@ -1,5 +1,9 @@
 #include "libft.h"
 
+/*
+** You should use ft_memchr instead of this function.
+*/
+
 int	ft_int_in(int *list, int to_check, size_t size)
 {
 	size_t	i;

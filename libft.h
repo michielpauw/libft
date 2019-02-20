@@ -142,7 +142,11 @@ void					ft_arrayiter(void **array, size_t iters, size_t size,
 		void (*f) ());
 void					**ft_arraymap(void **in_arr, size_t iters, size_t size,
 		void *(*f) ());
-int						*ft_str_list_to_int(char *str, size_t size);
 int						ft_int_in(int *list, int to_check, size_t size);
+int						*ft_str_list_to_int(char *str, int terminate, int term);
+void					ft_add_int_to_array(int to_add, int **array,
+		int terminate, int term);
+void					*ft_realloc_2(void *s, size_t old_size,
+		size_t new_size);
 
 #endif

@@ -29,3 +29,13 @@ void	ft_realloc(void **s, size_t old_size, size_t new_size)
 	}
 	free(m);
 }
+
+void	*ft_realloc_2(void *s, size_t old_size, size_t new_size)
+{
+	unsigned char	*m;
+
+	m = (unsigned char *)ft_alloc(sizeof(unsigned char) * new_size);
+	ft_memcpy(m, (unsigned char *)s, old_size);
+	free(s);
+	return ((void *)m);
+}

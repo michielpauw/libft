@@ -1,37 +1,34 @@
 #include "libft.h"
 
-static int	add_to_list(char *str, int *list, int amount)
+static int	get_int(char *str, size_t *index)
 {
-	int	i;
+	int	to_return;
 
-	list[amount] = ft_atoi(str);
-	i = 1;
-	while (ft_isdigit(*(str + i)))
-		i++;
-	return (i);
+	to_return = ft_atoi(str + *index);
+	(*index)++;
+	while (ft_isdigit(*(str + *index)))
+		(*index)++;
+	return (to_return);
 }
 
-int	*ft_str_list_to_int(char *str, size_t size)
+int			*ft_str_list_to_int(char *str, int terminate, int term)
 {
 	int		*to_return;
+	int		to_add;
 	size_t	i;
-	size_t	amount;
 
-	to_return = (int *)ft_alloc(sizeof(int) * size);
+	to_return = NULL;
 	i = 0;
-	amount = 0;
 	while (*(str + i))
 	{
-		if (ft_isdigit(*(str + i)) || *(str + i) == '-' || *(str + i) == '+')
+		if (ft_isdigit(*(str + i)) ||
+				((*(str + i) == '-' || *(str + i) == '+')
+				&& ft_isdigit(*(str + i + 1))))
 		{
-			i += add_to_list(str + i, to_return, amount);
-			amount++;
+			to_add = get_int(str, &i);
+			ft_add_int_to_array(to_add, &to_return, terminate, term);
 		}
-		if (amount == size)
-			return (to_return);
 		i++;
 	}
-	if (amount < size)
-		ft_error(ARGUMENT_ERR);
 	return (to_return);
 }

@@ -88,6 +88,7 @@ SRC = ft_atoi.c\
 	  ft_isprime.c\
 	  ft_convert_base.c\
 	  ft_convert_num_base.c\
+	  ft_add_int_to_array.c\
 	  ft_sqrt_fl.c\
 	  ft_sqrt_cl.c\
 	  get_next_line.c\
